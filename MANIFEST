@@ -5,4 +5,4 @@ GPC.xs
 GPC.h
 MANIFEST
 Makefile.PL
-test.pl
+t/GPC.t

@@ -2,7 +2,7 @@
 package GPC;
 
 use vars qw($VERSION);
-$VERSION = '1.01';
+$VERSION = '1.02';
 
 =pod
 
@@ -176,6 +176,5 @@ package GPC;
 bootstrap GPC;
 package GPC;
 @EXPORT = qw( );
-# {"GPC::fopen", _wrap_fopen},
-# {"GPC::fclose", _wrap_fclose},
+
 1;
