@@ -1837,7 +1837,7 @@ XS(SWIG_init) {
 */
 
 /*
-===========================================================================
+###########################################################################
 
 Project:   Generic Polygon Clipper
 
@@ -1865,14 +1865,14 @@ Copyright: (C) 1997-1999, Advanced Interfaces Group,
            There is no warranty or other guarantee of fitness of this
            software for any purpose. It is provided solely "as is".
 
-===========================================================================
+###########################################################################
 */
 
 
 /*
-===========================================================================
+###########################################################################
                                 Includes
-===========================================================================
+###########################################################################
 */
 
 #include "GPC.h"
@@ -1882,9 +1882,9 @@ Copyright: (C) 1997-1999, Advanced Interfaces Group,
 
 
 /*
-===========================================================================
+###########################################################################
                                 Constants
-===========================================================================
+###########################################################################
 */
 
 #ifndef TRUE
@@ -1905,9 +1905,9 @@ Copyright: (C) 1997-1999, Advanced Interfaces Group,
 
 
 /*
-===========================================================================
+###########################################################################
                                  Macros
-===========================================================================
+###########################################################################
 */
 
 #define EQ(a, b)           (fabs((a) - (b)) <= GPC_EPSILON)
@@ -1960,9 +1960,9 @@ Copyright: (C) 1997-1999, Advanced Interfaces Group,
 #define CFREE(p)            free(p);
 
 /*
-===========================================================================
+###########################################################################
                             Private Data Types
-===========================================================================
+###########################################################################
 */
 
 typedef enum                        /* Edge intersection classes         */
@@ -2075,9 +2075,9 @@ typedef struct bbox_shape           /* Contour axis-aligned bounding box */
 
 
 /*
-===========================================================================
+###########################################################################
                                Global Data
-===========================================================================
+###########################################################################
 */
 
 /* Horizontal edge state transitions within scanbeam boundary */
@@ -2092,9 +2092,9 @@ const h_state next_h_state[3][6]=
 
 
 /*
-===========================================================================
+###########################################################################
                              Private Functions
-===========================================================================
+###########################################################################
 */
 
 static void reset_it(it_node **it)
@@ -2861,9 +2861,9 @@ static void minimax_test(gpc_polygon *subj, gpc_polygon *clip, gpc_op op)
 
 
 /*
-===========================================================================
+###########################################################################
                              Public Functions
-===========================================================================
+###########################################################################
 */
 
 void gpc_free_polygon(gpc_polygon *p)
@@ -3044,7 +3044,7 @@ void gpc_polygon_clip(gpc_op op, gpc_polygon *subj, gpc_polygon *clip,
       dy= yt - yb;
     }
 
-    /* === SCANBEAM BOUNDARY PROCESSING ================================ */
+    /* ### SCANBEAM BOUNDARY PROCESSING ################################ */
 
     /* If LMT node corresponding to yb exists */
     if (local_min)
@@ -3314,7 +3314,7 @@ void gpc_polygon_clip(gpc_op op, gpc_polygon *subj, gpc_polygon *clip,
 
     if (scanbeam < sbt_entries)
     {
-      /* === SCANBEAM INTERIOR PROCESSING ============================== */
+      /* ### SCANBEAM INTERIOR PROCESSING ############################## */
 
       build_intersection_table(&it, aet, dy);
 
@@ -3546,7 +3546,7 @@ void gpc_polygon_clip(gpc_op op, gpc_polygon *subj, gpc_polygon *clip,
         edge->outp[ABOVE]= NULL;
       }
     }
-  } /* === END OF SCANBEAM PROCESSING ================================== */
+  } /* ### END OF SCANBEAM PROCESSING ################################## */
 
   /* Generate result polygon from out_poly */
   result->contour= NULL;
@@ -3690,7 +3690,7 @@ void gpc_tristrip_clip(gpc_op op, gpc_polygon *subj, gpc_polygon *clip,
       dy= yt - yb;
     }
 
-    /* === SCANBEAM BOUNDARY PROCESSING ================================ */
+    /* ### SCANBEAM BOUNDARY PROCESSING ################################ */
 
     /* If LMT node corresponding to yb exists */
     if (local_min)
@@ -3967,7 +3967,7 @@ void gpc_tristrip_clip(gpc_op op, gpc_polygon *subj, gpc_polygon *clip,
 
     if (scanbeam < sbt_entries)
     {
-      /* === SCANBEAM INTERIOR PROCESSING ============================== */
+      /* ### SCANBEAM INTERIOR PROCESSING ############################## */
 
       build_intersection_table(&it, aet, dy);
 
@@ -4228,7 +4228,7 @@ void gpc_tristrip_clip(gpc_op op, gpc_polygon *subj, gpc_polygon *clip,
         edge->outp[ABOVE]= NULL;
       }
     }
-  } /* === END OF SCANBEAM PROCESSING ================================== */
+  } /* ### END OF SCANBEAM PROCESSING ################################## */
 
   /* Generate result tristrip from tlist */
   result->strip= NULL;
@@ -4310,7 +4310,7 @@ void gpc_tristrip_clip(gpc_op op, gpc_polygon *subj, gpc_polygon *clip,
 }
 
 /*
-===========================================================================
+###########################################################################
                            End of file: gpc.c
-===========================================================================
+###########################################################################
 */

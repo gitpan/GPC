@@ -3,3 +3,7 @@ Revision history for Perl extension GPC.
 1.00  Fri Sep  6 14:36:09 2002
 	- First relesaseon
 
+1.01  Fri Sep 27 12:30:05 2002
+        - Change equal signs to hash signs in comments
+          (comment lines starting with '=' caused some
+           automated module tests to produce errors)
